@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../bower_components/mocha/mocha.css">
+    <script src="../bower_components/mocha/mocha.js"></script>
+    <script src="../bower_components/chai/chai.js"></script>
+    <script src="../src/incliment.js"></script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script>
+      mocha.setup("bdd");
+      var expect = chai.expect;
+      chai.use(function(_chai, utils) {
+        _chai.Assertion.addProperty("frozen", function() {
+          function isFrozen(thing) {
+            if(typeof thing != "object")
+              return false;
+            return Object.isFrozen(thing);
+          }
+
+          this.assert(
+            isFrozen(this._obj),
+            "expected #{this} to be frozen",
+            "expected #{this} to not be frozen"
+          );
+        });
+      });
+    </script>
+    <script src="incliment_test.js"></script>
+    <script>mocha.run();</script>
+  </body>
+</html>
