@@ -1,5 +1,5 @@
 describe("frost", function() {
-  it("should accept any type, but should not throw", function() {
+  it("should accept any type, and should not throw", function() {
     expect(function() {
       frost(1);
       frost("How about that?");
@@ -12,17 +12,17 @@ describe("frost", function() {
     expect(frost(thing)).to.equal(thing);
   });
 
-  it("should only freeze the given object", function() {
+  it("should only freeze a given object", function() {
     expect(frost({})).to.be.frozen;
   });
 
-  it("should not freeze objects owned by the given object", function() {
+  it("should not freeze objects owned by a given object", function() {
     expect(frost({child: {}}).child).to.not.be.frozen;
   });
 });
 
 describe("freeze", function() {
-  it("should accept all types", function() {
+  it("should accept any type, and should not throw", function() {
     expect(function() {
       freeze(1);
       freeze("Well gee golly");
@@ -30,11 +30,11 @@ describe("freeze", function() {
     }).to.not.throw(TypeError);
   });
 
-  it("should freeze the given object", function() {
+  it("should freeze a given object", function() {
     expect(freeze({})).to.be.frozen;
   });
 
-  it("should freeze all objects owned by the given object", function() {
+  it("should freeze all objects owned by a given object", function() {
     expect(freeze({child: {}}).child).to.be.frozen;
     expect(freeze({child1: {child2: {child3: {}}}}).child1.child2.child3).to.be.frozen;
   });

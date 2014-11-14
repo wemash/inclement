@@ -12,6 +12,7 @@
     <script>
       mocha.setup("bdd");
       var expect = chai.expect;
+
       chai.use(function(_chai, utils) {
         _chai.Assertion.addProperty("frozen", function() {
           function isFrozen(thing) {

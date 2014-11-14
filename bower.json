@@ -1,0 +1,26 @@
+{
+  "name": "inclement",
+  "version": "0.0.1",
+  "authors": [
+    "Kenneth Pullen <ken@mash.is>"
+  ],
+  "description": "Apply a light frosting to objects, or freeze them entirely",
+  "main": "src/inclement.js",
+  "keywords": [
+    "Object.freeze",
+    "frosty",
+    "cold",
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "mocha": "~2.0.1",
+    "chai": "~1.10.0"
+  }
+}
