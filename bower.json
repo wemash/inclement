@@ -1,6 +1,6 @@
 {
   "name": "inclement",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Kenneth Pullen <ken@mash.is>"
   ],
@@ -9,7 +9,7 @@
   "keywords": [
     "Object.freeze",
     "frosty",
-    "cold",
+    "cold"
   ],
   "license": "MIT",
   "ignore": [
